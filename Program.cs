@@ -154,18 +154,18 @@
 
 // Console.WriteLine(recommendation);
 
-// Вариант 7. Уровень игрока
+// // Вариант 7. Уровень игрока
 
-Console.Write("Введите количество очков: ");
-int points = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите количество очков: ");
+// int points = int.Parse(Console.ReadLine()!);
 
-string playerRank = points switch
-{
-    < 0 => "Ошибка",
-    >= 0 and <= 999 => "Новичок",
-    >= 1000 and <= 4999 => "Опытный",
-    >= 5000 and <= 9999 => "Продвинутый",
-    _ => "Мастер"
-};
+// string playerRank = points switch
+// {
+//     < 0 => "Ошибка",
+//     >= 0 and <= 999 => "Новичок",
+//     >= 1000 and <= 4999 => "Опытный",
+//     >= 5000 and <= 9999 => "Продвинутый",
+//     _ => "Мастер"
+// };
 
-Console.WriteLine(playerRank);
+// Console.WriteLine(playerRank);
