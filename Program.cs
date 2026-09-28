@@ -90,16 +90,32 @@
 
 // Задача А. Время года
 
+// Console.WriteLine();
+
+// int score1 = 4;
+
+// string result = score1 switch {
+//     12 or 1 or 2 => "Зима",
+//     3 or 4 or 5 => "Весна",
+//     6 or 7 or 8 => "Лето",
+//     9 or 10 or 11 => "Осень",
+//     _ => "Неверный месяц"    
+// };
+
+// System.Console.WriteLine(result);
+
+// Задача Б. Категория возраста
+
 Console.WriteLine();
 
-int score1 = 4;
+int scoreAge = 42;
 
-string result = score1 switch {
-    12 or 1 or 2 => "Зима",
-    3 or 4 or 5 => "Весна",
-    6 or 7 or 8 => "Лето",
-    9 or 10 or 11 => "Осень",
-    _ => "Неверный месяц"    
+string result = scoreAge switch {
+    < 0 => "Ошибка",
+    >= 0 and <= 6 => "Ребёнок",
+    >= 7 and <= 17 => "Подросток",
+    >= 18 and <= 64 => "Взрослый",
+    _ => "Пенсионер"    
 };
 
-System.Console.WriteLine(result);
+Console.WriteLine(result);
