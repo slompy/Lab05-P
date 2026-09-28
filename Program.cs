@@ -42,33 +42,47 @@
 
 // Console.WriteLine(result);
 
-Console.WriteLine();
+// Console.WriteLine();
 
-string role = "admin";
+// string role = "admin";
 
-string result1 = role switch {
-    "admin" => "Доступ преподавателя",
-    "teacher" => "Доступ преподавателя",
-    not "teacher" => "Ограниченный доступ"
-};
+// string result1 = role switch {
+//     "admin" => "Доступ преподавателя",
+//     "teacher" => "Доступ преподавателя",
+//     not "teacher" => "Ограниченный доступ"
+// };
 
-Console.WriteLine(result1);
-
-
-Console.WriteLine();
+// Console.WriteLine(result1);
 
 
-int age = 20;
-bool hasTicket = true;
+// Console.WriteLine();
 
-switch (age) {
-    case >= 18 when hasTicket:
-        Console.WriteLine("Вход разрешён");
+
+// int age = 20;
+// bool hasTicket = true;
+
+// switch (age) {
+//     case >= 18 when hasTicket:
+//         Console.WriteLine("Вход разрешён");
+//         break;
+//     case >= 18:
+//         Console.WriteLine("Нет билета");
+//         break;
+//     default:
+//         Console.WriteLine("Возраст не подходит");
+//         break;
+// }
+
+int level = 2
+
+switch (level) {
+    case 1:
+        Console.WriteLine("Начальный уровень");
         break;
-    case >= 18:
-        Console.WriteLine("Нет билета");
-        break;
-    default:
-        Console.WriteLine("Возраст не подходит");
+    case 2:
+        Console.WriteLine("Средний уровен");
+        goto case 1;
+    case 3:
+        Console.WriteLine("Продвинутый уровень");
         break;
 }
