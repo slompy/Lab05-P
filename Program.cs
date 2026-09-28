@@ -169,3 +169,19 @@
 // };
 
 // Console.WriteLine(playerRank);
+
+// Доп задание
+
+int number = 2;
+
+string anotherResult = number switch
+{
+    < 0 => "Отрицательное",
+    1 or 2 or 3 => "Маленькое",
+    >= 0 and <= 9 => "Однозначное",
+    >= 10 and <= 99 => "Двузначное",
+    >= 100 and <= 999 => "Трехзначное",
+    _ => "Больше"
+};
+
+Console.WriteLine(anotherResult);
