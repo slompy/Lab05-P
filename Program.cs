@@ -73,16 +73,33 @@
 //         break;
 // }
 
-int level = 2
+// int level = 2
 
-switch (level) {
-    case 1:
-        Console.WriteLine("Начальный уровень");
-        break;
-    case 2:
-        Console.WriteLine("Средний уровен");
-        goto case 1;
-    case 3:
-        Console.WriteLine("Продвинутый уровень");
-        break;
-}
+// switch (level) {
+//     case 1:
+//         Console.WriteLine("Начальный уровень");
+//         break;
+//     case 2:
+//         Console.WriteLine("Средний уровен");
+//         goto case 1;
+//     case 3:
+//         Console.WriteLine("Продвинутый уровень");
+//         break;
+// }
+
+
+// Задача А. Время года
+
+Console.WriteLine();
+
+int score1 = 4;
+
+string result = score1 switch {
+    12 or 1 or 2 => "Зима",
+    3 or 4 or 5 => "Весна",
+    6 or 7 or 8 => "Лето",
+    9 or 10 or 11 => "Осень",
+    _ => "Неверный месяц"    
+};
+
+System.Console.WriteLine(result);
