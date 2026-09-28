@@ -138,18 +138,34 @@
 
 // Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
 
-// Вариант 5. Рекомендация по температуре
+// // Вариант 5. Рекомендация по температуре
 
-Console.Write("Введите температуру: ");
-int temperatura = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите температуру: ");
+// int temperatura = int.Parse(Console.ReadLine()!);
 
-string recommendation = temperatura switch
+// string recommendation = temperatura switch
+// {
+//     < 0 => "Мороз",
+//     >= 0 and <= 9 => "Прохладно",
+//     >= 10 and <= 19 => "Комфортно",
+//     >= 20 and <= 29 => "Тепло",
+//     _ => "Жарко"
+// };
+
+// Console.WriteLine(recommendation);
+
+// Вариант 7. Уровень игрока
+
+Console.Write("Введите количество очков: ");
+int points = int.Parse(Console.ReadLine()!);
+
+string playerRank = points switch
 {
-    < 0 => "Мороз",
-    >= 0 and <= 9 => "Прохладно",
-    >= 10 and <= 19 => "Комфортно",
-    >= 20 and <= 29 => "Тепло",
-    _ => "Жарко"
+    < 0 => "Ошибка",
+    >= 0 and <= 999 => "Новичок",
+    >= 1000 and <= 4999 => "Опытный",
+    >= 5000 and <= 9999 => "Продвинутый",
+    _ => "Мастер"
 };
 
-Console.WriteLine(recommendation);
+Console.WriteLine(playerRank);
