@@ -28,17 +28,47 @@
 //         break;
 // }
 
+// Console.WriteLine();
+
+// int score1 = 14;
+
+// string result = score1 switch {
+//     >= 35 => "Очень жарко",
+//     >= 25 => "Жарко",
+//     >= 15 => "Комфортно",
+//     >= 0 => "Мороз",
+//     _ => "Некорректная температура"    
+// };
+
+// Console.WriteLine(result);
+
 Console.WriteLine();
 
-int score1 = 14;
+string role = "admin";
 
-string result = score1 switch {
-    >= 35 => "Очень жарко",
-    >= 25 => "Жарко",
-    >= 15 => "Комфортно",
-    >= 0 => "Мороз",
-    _ => "Некорректная температура"    
+string result1 = role switch {
+    "admin" => "Доступ преподавателя",
+    "teacher" => "Доступ преподавателя",
+    not "teacher" => "Ограниченный доступ"
 };
 
-Console.WriteLine(result);
+Console.WriteLine(result1);
 
+
+Console.WriteLine();
+
+
+int age = 20;
+bool hasTicket = true;
+
+switch (age) {
+    case >= 18 when hasTicket:
+        Console.WriteLine("Вход разрешён");
+        break;
+    case >= 18:
+        Console.WriteLine("Нет билета");
+        break;
+    default:
+        Console.WriteLine("Возраст не подходит");
+        break;
+}
