@@ -88,7 +88,7 @@
 // }
 
 
-// Задача А. Время года
+// // Задача А. Время года
 
 // Console.WriteLine();
 
@@ -104,18 +104,52 @@
 
 // System.Console.WriteLine(result);
 
-// Задача Б. Категория возраста
+// // Задача Б. Категория возраста
 
-Console.WriteLine();
+// Console.WriteLine();
 
-int scoreAge = 42;
+// int scoreAge = 42;
 
-string result = scoreAge switch {
-    < 0 => "Ошибка",
-    >= 0 and <= 6 => "Ребёнок",
-    >= 7 and <= 17 => "Подросток",
-    >= 18 and <= 64 => "Взрослый",
-    _ => "Пенсионер"    
+// string result5 = scoreAge switch {
+//     < 0 => "Ошибка",
+//     >= 0 and <= 6 => "Ребёнок",
+//     >= 7 and <= 17 => "Подросток",
+//     >= 18 and <= 64 => "Взрослый",
+//     _ => "Пенсионер"    
+// };
+
+// Console.WriteLine(result5);
+
+// Console.Write("Введите свою фамилию: ");
+// string surname = Console.ReadLine()!.Trim();
+
+// if (string.IsNullOrEmpty(surname)) {
+//     Console.WriteLine("Фамилия не введена. Завершение работы.");
+//     return;
+// }
+
+// Random rnd = new(surname.GetHashCode() + DateTime.Now.DayOfYear);
+
+// var assigned = Enumerable.Range(1, 10)
+//     .OrderBy(_ => rnd.Next())
+//     .Take(2)
+//     .OrderBy(x => x)
+//     .ToList();
+
+// Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
+
+// Вариант 5. Рекомендация по температуре
+
+Console.Write("Введите температуру: ");
+int temperatura = int.Parse(Console.ReadLine()!);
+
+string recommendation = temperatura switch
+{
+    < 0 => "Мороз",
+    >= 0 and <= 9 => "Прохладно",
+    >= 10 and <= 19 => "Комфортно",
+    >= 20 and <= 29 => "Тепло",
+    _ => "Жарко"
 };
 
-Console.WriteLine(result);
+Console.WriteLine(recommendation);
